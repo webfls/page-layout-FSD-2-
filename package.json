@@ -1,0 +1,57 @@
+{
+  "name": "page-layout-fsd-2-",
+  "version": "1.0.0",
+  "description": "Обучающее задание на фронтенд разработчика.\r Макет страниц по поиску номеров в отеле.",
+  "private": "true",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development webpack --config config/webpack.dev.js",
+    "stats": "webpack --json --profile > stats.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webfls/page-layout-FSD-2-.git"
+  },
+  "author": "Ann Medvedeva <ann26198905@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webfls/page-layout-FSD-2-/issues"
+  },
+  "homepage": "https://github.com/webfls/page-layout-FSD-2-#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.0.0-alpha.7",
+    "mini-css-extract-plugin": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.4",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^10.0.3",
+    "terser-webpack-plugin": "^5.0.3",
+    "webpack": "^5.1.3",
+    "webpack-bundle-analyzer": "^4.1.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
+  }
+}
