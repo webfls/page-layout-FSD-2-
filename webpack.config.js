@@ -72,15 +72,15 @@ const optimization = () => {
 const allPlugins = () => {
   const plugins = [
     new CleanWebpackPlugin(),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //TODO: change directory
-    //   from: srcVar + '/pages/color-type-page/img',
-    //   to: distVar + '/img',
-    // },
-    // ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          //TODO: change directory
+          from: srcVar + '/pages/color-type-page/img',
+          to: distVar + '/img',
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
       //TODO: change directory
       favicon: srcVar + '/pages/color-type-page/favicon.ico',

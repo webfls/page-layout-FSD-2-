@@ -1,9 +1,11 @@
 extends ../../components/layouts/base-layout.pug
+block variables
+  title Color & Type Page
 
-block title
-  title = "Color & Type Page"
 block content
-  p.fr Ура, получилось, ептыть
-//- block scripts
-//-     script("./bundle.js")
+  include ../../components/includes/wrapper-incl.pug
+    .colored-blocks
+      - for(var i = 1; i < 8; i++) {
+        .colored-blocks__colored-block(class=`colored-blocks__colored-block${i}`)
+        - }
 
