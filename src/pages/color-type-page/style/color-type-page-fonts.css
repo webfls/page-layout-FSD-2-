@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../../../fonts/quicksand/quicksand-v20-latin-regular.eot'), url('../../../fonts/quicksand/quicksand-v20-latin-regular.ttf'), url('../../../fonts/quicksand/quicksand-v20-latin-regular.svg'), url('../../../fonts/quicksand/quicksand-v20-latin-regular.woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../../../fonts/quicksand/quicksand-v20-latin-700.eot'), url('../../../fonts/quicksand/quicksand-v20-latin-700.ttf'), url('../../../fonts/quicksand/quicksand-v20-latin-700.svg'), url('../../../fonts/quicksand/quicksand-v20-latin-700.woff2'),  url('../../../fonts/quicksand/quicksand-v20-latin-700.woff');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../../../fonts/montserrat/montserrat-v14-cyrillic-regular.eot'), url('../../../fonts/montserrat/montserrat-v14-cyrillic-regular.ttf'), url('../../../fonts/montserrat/montserrat-v14-cyrillic-regular.svg'), url('../../../fonts/montserrat/montserrat-v14-cyrillic-regular.woff2'), url('../../../fonts/montserrat/montserrat-v14-cyrillic-regular.woff');
+	font-weight: 400;
+	font-style: normal;
+}

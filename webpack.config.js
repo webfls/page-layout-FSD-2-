@@ -46,6 +46,7 @@ const devServer = () => {
       compress: true,
       hot: true,
       port: 3000,
+      index: 'color-type-page.html',
     }
   }
   return devOptions
@@ -71,19 +72,20 @@ const optimization = () => {
 const allPlugins = () => {
   const plugins = [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: srcVar + '/assets/img',
-          to: distVar + '/img',
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //TODO: change directory
+    //   from: srcVar + '/pages/color-type-page/img',
+    //   to: distVar + '/img',
+    // },
+    // ],
+    // }),
     new HtmlWebpackPlugin({
-      // favicon: srcVar + '/static/favicon.ico',
-      template: srcVar + '/pug/layout/main.pug',
-      // filename: filename('html'),
-      filename: 'index.html',
+      //TODO: change directory
+      favicon: srcVar + '/pages/color-type-page/favicon.ico',
+      template: srcVar + '/pages/color-type-page/color-type-page.pug',
+      filename: 'color-type-page.html',
       inject: true,
     }),
     new MiniCssExtractPlugin({
@@ -120,17 +122,15 @@ const jsLoaders = () => {
 module.exports = {
   resolve: {
     alias: {
-      // '@color-type-page': path.resolve(
-      //   __dirname,
-      //   '../src/pages/color-type-page/'
-      // ),
+      '@color-type-page': path.resolve(__dirname, 'src/pages/color-type-page/'),
     },
   },
 
   mode: !isDev ? 'production' : 'development',
   devtool: !isDev ? false : 'inline-source-map',
   context: srcVar,
-  entry: ['@babel/polyfill', './js/index.js'],
+  //TODO: change directory
+  entry: ['@babel/polyfill', './pages/color-type-page/color-type-page.js'],
 
   output: {
     path: distVar,
@@ -177,11 +177,21 @@ module.exports = {
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: 'asset/resource',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+          },
+        },
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset/resource',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+          },
+        },
       },
       {
         test: /\.pug$/,
