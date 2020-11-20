@@ -1,22 +1,24 @@
 extends ../../components/layouts/base-layout.pug
-block variables
+block title
   title Color & Type Page
 
 block content
   include ../../components/includes/wrapper-incl.pug
     .columns
-      section.columns__column1.colored-blocks
-        - for(var i = 1; i < 8; i++) {
-          .colored-blocks__colored-block(class=`colored-blocks__colored-block${i}`)
-          - }
-      section.columns__column2.text-blocks
-        each val,  key in {"Dark Shade 100%": "#1F2041", "Dark Shade 75%": "#1F2041", "Dark Shade 50%": "#1F2041", "Dark Shade 25%": "#1F2041", "Dark Shade 5%": "#1F2041", "Purple": "#BC9CFF", "Green": "#6FCF97"}
-          h3.text-blocks__name=key
-          span.text-blocks__color=val
-      section.columns__column3.font-name-blocks
-        each val,index in ["H1", "H2", "H3", "Body"]
-          span.font-name-blocks__tag-name(class=`font-name-blocks__tag-name${index}`)=val
-      section.columns__column4.font-text-blocks
-        - var exm=["This one is the sub-section or widget title", "Next one is the item title inside widgets", "This is a label or CTA text", "This is the body text which is used for most of the design, like paragraphs, lists, etc."]
-          each i,index in exm
-            span.font-text-blocks__font-example(class=`font-text-blocks__font-example${index}`)=i
+      .columns__left-side
+        section.columns__column1.colored-blocks
+          - for(var i = 1; i < 8; i++) {
+            .colored-blocks__colored-block(class=`colored-blocks__colored-block${i}`)
+            - }
+        section.columns__column2.text-blocks
+          each val,  key in {"Dark Shade 100%": "#1F2041", "Dark Shade 75%": "#1F2041", "Dark Shade 50%": "#1F2041", "Dark Shade 25%": "#1F2041", "Dark Shade 5%": "#1F2041", "Purple": "#BC9CFF", "Green": "#6FCF97"}
+            span.text-blocks__name=key
+            span.text-blocks__color=val
+      .columns__right-side
+        section.columns__column3.font-name-blocks
+          each val,index in ["H1", "H2", "H3", "Body"]
+            span.font-name-blocks__tag-name(class=`font-name-blocks__tag-name${index}`)=val
+        section.columns__column4.font-text-blocks
+          - var exm=["This one is the sub-section or widget title", "Next one is the item title inside widgets", "This is a label or CTA text", "This is the body text which is used for most of the design, like paragraphs, lists, etc."]
+            each i,index in exm
+              span.font-text-blocks__font-example(class=`font-text-blocks__font-example${index}`)=i

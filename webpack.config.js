@@ -146,6 +146,12 @@ module.exports = {
     builtAt: true,
     assetsSpace: 0,
     modulesSpace: 0,
+    moduleAssets: false,
+    dependentModules: false,
+    runtimeModules: false,
+    errorDetails: true,
+    errorStack: true,
+    timings: true,
   },
 
   plugins: allPlugins(),
