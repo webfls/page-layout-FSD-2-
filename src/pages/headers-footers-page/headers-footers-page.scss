@@ -1,0 +1,45 @@
+
+@import './style/headers-footers-page-fonts.css';
+@import '../../components/mixin.scss';
+@import '../../components/media.scss';
+@import '../../components/includes/wrapper-incl/wrapper-incl.scss';
+@import '../../components/blocks/menu/menu.scss';
+
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+ 
+  // @include _768 {
+  //   flex-direction: column;
+  //   &__left-side {
+  //      justify-content: center;
+  //   }
+  //   &__right-side {
+  //  justify-content: center;
+  //  margin-top: 20px;
+  //   }
+  // }
+}
+
+header1 {
+  background-color: #fff;
+  height: 70px;
+// &__wrapper {
+
+// }
+
+  // &__columns {
+
+  // }
+    &__logotype {
+// background-image: url('./img/Logo-with-name.png');
+width: 105.69px;
+height: 40px;
+background-size: cover;
+    }
+    // &__menu {
+
+    // }
+}

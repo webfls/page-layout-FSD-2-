@@ -1,0 +1,25 @@
+.menu {
+  &__list {
+
+  }
+  &__item {
+margin-right: 20px;
+  }
+  &__btnEnter {
+    Width: 87px;
+Height: 34px;
+border-radius: 22px;
+border: 1px solid #BC9CFF;
+background-color: #FFF;
+text-transform: uppercase;
+// TODO: gradient
+  }
+  &__btnRegister {
+    Width: 196px;
+    Height: 34px;
+    border-radius: 22px;
+    background-color: #BC9CFF;
+// TODO: gradient
+text-transform: uppercase;
+  }
+}

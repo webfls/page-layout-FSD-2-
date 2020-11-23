@@ -1,0 +1,12 @@
+extends ../../components/layouts/base-layout.pug
+block title
+  title Headers & Footers Page
+
+block content
+  header.header1
+    .header1__wrapper
+      include ../../components/includes/wrapper-incl/wrapper-incl.pug
+      .header1__columns.columns
+        img.header1__logotype(url='./img/logotype.png' alt='logotype')
+        .header1__menu
+          include ../../components/blocks/menu/menu.pug
