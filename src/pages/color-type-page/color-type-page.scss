@@ -2,33 +2,7 @@
 @import './style/color-type-page-fonts.css';
 @import '../../components/mixin.scss';
 @import '../../components/media.scss';
-
-body {
-  min-width: 320px;
-  // overflow: hidden;
-}
-
-.wrapper {
-  max-width: 1132.26px;
-  // min-width: 260px;
-  padding: 140px 158px 10px 149.74px;
-  @include _1060 {
-    padding: 110px 100px 10px 100px;
-  }
-  @include _940 {
-    padding: 110px 45px 10px 45px;
-  }
-}
-
-.logo {
-  background-image: url('./img/logo.png');
-  width: 48px;
-  height: 48px;
-  background-size: cover;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
+@import '../../components/includes/wrapper-incl/wrapper-incl.scss';
 
 .columns {
   display: flex;
@@ -109,7 +83,7 @@ letter-spacing: 0;
     }
   }
 }
-
+// TODO: проверить маргины!
 .font-name-blocks {
   display: flex;
   flex-direction: column;
