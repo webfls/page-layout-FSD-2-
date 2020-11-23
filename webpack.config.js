@@ -74,22 +74,22 @@ const allPlugins = () => {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        {
-          from: srcVar + '/pages/color-type-page/img',
-          to: distVar + '/img',
-        },
+        // {
+        //   from: srcVar + '/pages/color-type-page/img',
+        //   to: distVar + '/img',
+        // },
         {
           from: srcVar + '/pages/headers-footers-page/img',
           to: distVar + '/img',
         },
       ],
     }),
-    new HtmlWebpackPlugin({
-      favicon: srcVar + '/pages/color-type-page/favicon.ico',
-      template: srcVar + '/pages/color-type-page/color-type-page.pug',
-      filename: 'color-type-page.html',
-      inject: true,
-    }),
+    // new HtmlWebpackPlugin({
+    //   favicon: srcVar + '/pages/color-type-page/favicon.ico',
+    //   template: srcVar + '/pages/color-type-page/color-type-page.pug',
+    //   filename: 'color-type-page.html',
+    //   inject: true,
+    // }),
     new HtmlWebpackPlugin({
       favicon: srcVar + '/pages/headers-footers-page/favicon.ico',
       template: srcVar + '/pages/headers-footers-page/headers-footers-page.pug',
@@ -143,10 +143,10 @@ module.exports = {
   context: srcVar,
 
   entry: {
-    colorTypePage: [
-      '@babel/polyfill',
-      './pages/color-type-page/color-type-page.js',
-    ],
+    // colorTypePage: [
+    //   '@babel/polyfill',
+    //   './pages/color-type-page/color-type-page.js',
+    // ],
     headersFootersPage: [
       '@babel/polyfill',
       './pages/headers-footers-page/headers-footers-page.js',
