@@ -1,0 +1,4 @@
+{
+  "path-autocomplete.extensionOnImport": true,
+  "path-autocomplete.triggerOutsideStrings": true
+}
