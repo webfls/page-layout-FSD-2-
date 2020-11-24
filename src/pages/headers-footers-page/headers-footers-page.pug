@@ -3,10 +3,10 @@ block title
   title Headers & Footers Page
 
 block content
-  header.header1
-    .header1__wrapper
-      include ../../components/includes/wrapper-incl/wrapper-incl.pug
-      .header1__columns.columns
-        img.header1__logotype(url='./img/logotype.png' alt='logotype')
-        .header1__menu
-          include ../../components/blocks/menu/menu.pug
+  include ../../components/includes/wrapper-incl/wrapper-incl.pug
+    header.header
+      .header__wrapper
+        .header__columns
+          img.header__logotype(src="./img/Logo-with-name.png" alt="logotype")
+          .header__menu
+            include ../../components/blocks/menu/menu.pug
