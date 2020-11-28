@@ -3,15 +3,18 @@ body {
 }
 
 .wrapper {
-  background-color: #E5E5E5;
+  background-color: #F4F4F6;
   max-width: 1132.26px;
   padding: 140px 158px 10px 149.74px;
+
   @include _1060 {
     padding: 110px 100px 10px 100px;
   }
+
   @include _940 {
     padding: 110px 45px 10px 45px;
   }
+
   &_white {
     background-color: #fff;
   }
