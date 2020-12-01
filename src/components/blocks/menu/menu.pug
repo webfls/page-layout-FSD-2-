@@ -6,18 +6,20 @@ nav.menu
           a.menu__link.menu__link-bold(href="http://web-fls.ru/1")=i
       else
       if i === 'Соглашения'
-        li.menu__item=i
-          ul.menu__sublist
-            each v in ['Соглашение1','Соглашение2','Соглашение3','Соглашение4','Соглашение5']
-              li.menu__subitem
-                a.menu__sublink(href="http://web-fls.ru/1")=v
+        li.menu__item
+          a.menu__link(href="http://web-fls.ru/1")=i
+            ul.menu__sublist
+              each v in ['Соглашение1','Соглашение2','Соглашение3','Соглашение4','Соглашение5']
+                li.menu__subitem
+                  a.menu__sublink(href="http://web-fls.ru/1")=v
       else
       if i === 'Услуги'
-        li.menu__item=i
-          ul.menu__sublist
-            each j in ['Услуга1','Услуга2','Услуга3','Услуга4','Услуга5']
-              li.menu__subitem
-                a.menu__sublink(href="http://web-fls.ru/1")=j
+        li.menu__item
+          a.menu__link(href="http://web-fls.ru/1")=i
+            ul.menu__sublist
+              each j in ['Услуга1','Услуга2','Услуга3','Услуга4','Услуга5']
+                li.menu__subitem
+                  a.menu__sublink(href="http://web-fls.ru/1")=j
       else if i === 'Вакансии' || i === 'Новости'
         li.menu__item
           a.menu__link(href="http://web-fls.ru/1")=i

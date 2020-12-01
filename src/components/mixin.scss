@@ -1,6 +1,21 @@
 @mixin font-text-blocks ($size, $margin, $weight:700, $tt:none) {
-font-size: $size;
-margin-bottom: $margin;
-font-weight: $weight;
-text-transform: $tt;
+  font-size: $size;
+  margin-bottom: $margin;
+  font-weight: $weight;
+  text-transform: $tt;
+}
+
+@mixin Montserrat($fw: 400, $fsl: normal, $fsz:14px) {
+  font-family: 'Montserrat, sans-serif';
+  font-style: $fsl;
+  font-weight: $fw;
+  font-size: $fsz;
+}
+
+@mixin MaterialIcons() {
+  content: 'expand_more';
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
 }

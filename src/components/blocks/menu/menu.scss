@@ -6,6 +6,8 @@
   &__list {
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
   &__item {
@@ -15,11 +17,7 @@
 
     &:nth-child(2):after,
     &:nth-child(5):after {
-      content: 'expand_more';
-      font-family: 'Material Icons';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 24px;
+      @include MaterialIcons();
       display: inline-block;
       vertical-align: middle;
       line-height: 0;
@@ -27,12 +25,17 @@
     }
   }
 
+  &__link {
+    &:first-of-type {
+      letter-spacing: 0.9px;
+    }
+  }
+
+
   &__link,
   &__sublink,
   &__item {
-    font-family: 'Monserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+    @include Montserrat($fw: 400, $fsl: normal, $fsz:14px);
     line-height: 27.41px;
     color: lighten(#1F2041, 50%);
     text-decoration: none;
@@ -46,15 +49,18 @@
 
   &__sublist {
     position: absolute;
+    z-index: 10;
     padding: 20px 10px 0 10px;
     top: 5px;
     right: 6px;
+    left: 0;
+    bottom: 0;
     display: none;
   }
 
   &__subitem {
     list-style-type: none;
-    margin-bottom: 8px;
+    padding-bottom: 8px;
   }
 
   &__link-bold {

@@ -8,7 +8,7 @@
     max-width: 1440px;
     margin: 0 auto;
     height: 100%;
-    padding-top: 0;
+    overflow: hidden;
   }
 
   &__columns {
@@ -32,11 +32,9 @@
 
   &__btn {
     text-transform: uppercase;
-    font-family: 'Monserrat', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
+    @include Montserrat($fw: 700, $fsl: normal, $fsz:12px);
     line-height: 14.63px;
-    cursor: pointer;
+    letter-spacing: 0.6px;
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -48,33 +46,31 @@
   }
 
   &__btnEnter {
-    Width: 87px;
-    Height: 34px;
+    padding: 9px 20px 10px 20px;
     position: relative;
     border: none;
     border-radius: 22px;
     background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
-    padding: 0;
+    letter-spacing: 1px;
 
     &::after {
       content: 'Войти';
-      width: calc(100% - 4px);
-      height: calc(100% - 12px);
+      padding: 7px 20px 9px 20px;
       position: absolute;
       top: 2px;
       left: 2px;
+      bottom: 2px;
+      right: 2px;
       display: inline-block;
       background-color: #fff;
       color: #BC9CFF;
       border-radius: 22px;
-      padding-top: 8px;
-
+      line-height: 14.63px;
     }
   }
 
   &__btnRegister {
-    Width: 196px;
-    Height: 34px;
+    padding: 9px 20px 10px 19px;
     border-radius: 22px;
     background-color: #BC9CFF;
     color: #FFF;
@@ -84,7 +80,6 @@
 
   &__auth {
     line-height: 60px;
-
 
     &::before {
       content: "";
