@@ -1,0 +1,154 @@
+@import '../../mixin.scss';
+
+.footer {
+  background-color: #fff;
+  padding-top: 100px;
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+  margin-bottom: 20px;
+
+  &__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 140px;
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    max-width: 260px;
+    margin-bottom: 101px;
+
+    &:last-child {
+      margin-right: 2px;
+    }
+  }
+
+  &__logotype {
+    width: 105.69px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include Montserrat($fw:400, $fsl: normal, $fsz:14px);
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+  &__item-title {
+    @include Montserrat($fw:700, $fsl: normal, $fsz:12px);
+    line-height: 15px;
+    color: #1F2041;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+  }
+
+  &__item,
+  &__link {
+    @include Montserrat($fw:400, $fsl: normal, $fsz:14px);
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+    text-transform: none;
+    margin-top: 20px;
+  }
+
+  &__form {
+    margin-top: 20px;
+  }
+
+  &__addMail {
+    Width: 260px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    @include Montserrat($fw:400, $fsl: normal, $fsz:14px);
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.25);
+    padding: 12px 15px 8px 15px;
+    box-sizing: border-box;
+    position: relative;
+
+    &::-webkit-input-placeholder {
+      color: rgba(31, 32, 65, 0.25);
+    }
+
+    &::-moz-placeholder {
+      color: rgba(31, 32, 65, 0.25);
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba(31, 32, 65, 0.25);
+    }
+
+    &::placeholder {
+      color: rgba(31, 32, 65, 0.25);
+    }
+  }
+
+  &__submit {
+    position: absolute;
+  }
+}
+
+.subfooter {
+  padding: 26px 0;
+  border-top: 1px solid rgba(31, 32, 65, 0.1);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    line-height: 17.07px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 112px;
+  }
+
+  &__link {
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 23.46px;
+
+    &_twitter::after {
+      content: '\f099';
+    }
+
+    &_facebook::after {
+      content: '\f082';
+    }
+
+    &_instagram::after {
+      content: '\f16d';
+    }
+  }
+}
+
+.gradient {
+  background: -moz-linear-gradient(180deg, #bc9cff, #8ba4f9);
+  background: -webkit-linear-gradient(180deg, #bc9cff, #8ba4f9);
+  background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}

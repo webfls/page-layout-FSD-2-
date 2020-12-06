@@ -1,11 +1,11 @@
 @import '../../components/variables.scss';
 @import '../../components/null.scss';
 @import './style/headers-footers-page-fonts.css';
-@import '../../components/mixin.scss';
 @import '../../components/media.scss';
 @import '../../components/includes/logo/logo.scss';
-@import '../../components/blocks/menu/menu.scss';
+
 @import '../../components/blocks/header/header.scss';
+@import '../../components/blocks/footer/footer.scss';
 
 body {
   background-color: #F4F4F6;
