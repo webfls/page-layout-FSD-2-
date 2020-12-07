@@ -7,7 +7,7 @@
   height: 70px;
 
   &__wrapper {
-    max-width: 1440px;
+    max-width: 1160px;
     margin: 0 auto;
     height: 100%;
     padding: 0 140px;
@@ -36,7 +36,6 @@
     text-transform: uppercase;
     @include Montserrat($fw: 700, $fsl: normal, $fsz:12px);
     line-height: 14.63px;
-    letter-spacing: 0.6px;
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -53,11 +52,10 @@
     border: none;
     border-radius: 22px;
     background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
-    letter-spacing: 1px;
 
     &::after {
       content: 'Войти';
-      padding: 7px 20px 9px 20px;
+      padding: 7px 18px 8px 18px;
       position: absolute;
       top: 2px;
       left: 2px;

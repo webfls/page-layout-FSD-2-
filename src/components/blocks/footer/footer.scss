@@ -7,7 +7,7 @@
   margin-bottom: 20px;
 
   &__wrapper {
-    max-width: 1440px;
+    max-width: 1160px;
     margin: 0 auto;
     height: 100%;
     overflow: hidden;
@@ -21,10 +21,21 @@
 
   &__column {
     max-width: 260px;
-    margin-bottom: 101px;
+    margin-bottom: 100px;
 
-    &:last-child {
-      margin-right: 2px;
+    &:nth-child(2) {
+      position: relative;
+      left: -21px;
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      left: -23px;
+    }
+
+    &:nth-child(4) {
+      position: relative;
+      left: 9px;
     }
   }
 
@@ -36,22 +47,26 @@
 
   &__text {
     @include Montserrat($fw:400, $fsl: normal, $fsz:14px);
-    line-height: 24px;
+    line-height: 23px;
     color: rgba(31, 32, 65, 0.75);
+  }
+
+  &__pos {
+    margin-top: 20px;
   }
 
   &__item-title {
     @include Montserrat($fw:700, $fsl: normal, $fsz:12px);
-    line-height: 15px;
+    line-height: 14.63px;
     color: #1F2041;
     text-transform: uppercase;
-    margin-bottom: 21px;
+    margin: 4px 0 21px 0;
   }
 
   &__item,
   &__link {
     @include Montserrat($fw:400, $fsl: normal, $fsz:14px);
-    line-height: 17px;
+    line-height: 19px;
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
     margin-top: 20px;
@@ -62,7 +77,7 @@
   }
 
   &__form {
-    margin-top: 20px;
+    margin-top: 22.5px;
   }
 
   &__addMail {
@@ -70,7 +85,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     @include Montserrat($fw:400, $fsl: normal, $fsz:14px);
-    line-height: 24px;
+    line-height: 22px;
     color: rgba(31, 32, 65, 0.25);
     padding: 12px 15px 8px 15px;
     box-sizing: border-box;
@@ -100,8 +115,9 @@
 
 .footer-small {
   max-width: 560px;
-  padding: 120px 104px;
+  padding: 120px 104px 122px;
   margin: 0 auto;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
   &__graph {
     display: flex;
@@ -112,6 +128,7 @@
 
   &__pos:not(:last-child) {
     margin-bottom: 20px;
+    padding: 0;
 
     &:nth-child(2) {
       margin-bottom: 25px;
@@ -120,8 +137,9 @@
 }
 
 .subfooter {
-  padding: 26px 0;
-  border-top: 1px solid rgba(31, 32, 65, 0.1);
+  padding: 23px 0;
+  border-top: 2px solid rgba(31, 32, 65, 0.1);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
   &__row {
     display: flex;
@@ -130,6 +148,7 @@
 
   &__text {
     line-height: 17.07px;
+    padding: 3px 0;
   }
 
   &__social {
@@ -143,7 +162,7 @@
     font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
     font-weight: 900;
     font-size: 24px;
-    line-height: 23.46px;
+    line-height: 22px;
 
     &:hover::after {
       background: #59308B;
