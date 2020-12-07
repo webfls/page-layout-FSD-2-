@@ -1,0 +1,10 @@
+footer.footer.footer-small
+  .footer-small__graph
+    img.header__logotype.footer-small__pos(src="./img/Logo-with-name.png" alt="logotype")
+    p.footer__text.subfooter__text.footer-small__pos.
+      Copyright © 2018 Toxin отель. Все права зачищены.
+    ul.subfooter__social.footer-small__pos
+
+      each icon in [{name: 'twitter', link: 'http://web-fls.ru/1'}, {name: 'facebook', link: 'http://web-fls.ru/1'}, {name: 'instagram', link: 'http://web-fls.ru/1'}]
+        li.subfooter__item.gradient
+          a(class=`subfooter__link subfooter__link_${icon.name}` href=`${icon.link}`)

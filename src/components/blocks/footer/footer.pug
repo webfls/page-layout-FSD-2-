@@ -1,0 +1,39 @@
+footer.footer
+  .footer__wrapper
+    .footer__columns
+      .footer__column
+        img.header__logotype(src="./img/Logo-with-name.png" alt="logotype")
+        p.footer__text.footer__pos.
+          Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      ul.footer__column
+        li.footer__item-title Навигация
+        each a in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+          li.footer__item
+            a.footer__link(href="http://web-fls.ru/1")=a
+      ul.footer__column
+        li.footer__item-title О нас
+        each b in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+          li.footer__item
+            a.footer__link(href="http://web-fls.ru/1")=b
+      ul.footer__column
+        li.footer__item-title Служба поддержки
+        each c in ['Соглашения', 'Сообщества', 'Связь с нами']
+          li.footer__item
+            a.footer__link(href="http://web-fls.ru/1")=c
+      .footer__column
+        .footer__item-title Подписка
+        p.footer__text Получайте специальные предложения и новости сервиса
+        form.footer__form
+          input.footer__addMail(type="email" placeholder="Email")
+          button.footer__submit(type="submit" readonly="readonly")
+            i.material-icons.gradient.arrow arrow_forward
+  .subfooter
+    .subfooter__wrapper.footer__wrapper
+      .subfooter__row
+        p.footer__text.subfooter__text.
+          Copyright © 2018 Toxin отель. Все права зачищены.
+        ul.subfooter__social
+
+          each icon in [{name: 'twitter', link: 'http://web-fls.ru/1'}, {name: 'facebook', link: 'http://web-fls.ru/1'}, {name: 'instagram', link: 'http://web-fls.ru/1'}]
+            li.subfooter__item.gradient
+              a(class=`subfooter__link subfooter__link_${icon.name}` href=`${icon.link}`)
