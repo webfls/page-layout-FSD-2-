@@ -55,6 +55,10 @@
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
     margin-top: 20px;
+
+    &:hover {
+      color: #1F2041;
+    }
   }
 
   &__form {
@@ -94,6 +98,27 @@
   }
 }
 
+.footer-small {
+  max-width: 560px;
+  padding: 120px 104px;
+  margin: 0 auto;
+
+  &__graph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pos:not(:last-child) {
+    margin-bottom: 20px;
+
+    &:nth-child(2) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
 .subfooter {
   padding: 26px 0;
   border-top: 1px solid rgba(31, 32, 65, 0.1);
@@ -119,6 +144,14 @@
     font-weight: 900;
     font-size: 24px;
     line-height: 23.46px;
+
+    &:hover::after {
+      background: #59308B;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     &_twitter::after {
       content: '\f099';
