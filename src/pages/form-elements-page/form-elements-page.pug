@@ -1,0 +1,132 @@
+extends ../../components/layouts/base-layout.pug
+block title
+  title Form elements
+
+block content
+  .wrapper.wrapper_white
+    include ../../components/includes/logo/logo.pug
+      .form-elems.form-elems__columns
+        .form-elems__column
+
+          form.form-elems__text-field(name="text-field")
+            legend.form-elems__name
+              p.form-elems__title Text Field
+              p.form-elems__text Default
+            input.form-elems__addData(type="email" placeholder="Email")
+
+          form.form-elems__text-field(name="text-field")
+            legend.form-elems__name
+              p.form-elems__title Text Field
+              p.form-elems__text Hover / Focus
+            input.form-elems__addData(type="text" placeholder="This is pretty awesome")
+
+          form.form-elems__dropdown(name="dropdown")
+            legend.form-elems__title Dropdown
+            input.form-elems__addData(type="text" placeholder="Сколько гостей" list = "guest")
+            datalist(id = "guest")
+              - var i = 1;
+                while i < 11
+                  option(value=`${i++}`)
+            button.form-elems__choice(type="submit" readonly="readonly")
+              i.material-icons expand_more
+
+          form.form-elems__text-field(name="text-field")
+            legend.form-elems__title masked text field
+            input.form-elems__addData.js-date(type="text" placeholder="ДД.ММ.ГГГГ")
+
+          form.form-elems__text-field(name="text-field")
+            legend.form-elems__title date Dropdown
+            input.form-elems__addData.js-date(type="text" placeholder="ДД.ММ.ГГГГ")
+            button.form-elems__choice(type="submit" readonly="readonly")
+              i.material-icons expand_more
+
+          form.form-elems__text-field(name="text-field")
+            legend.form-elems__title date Dropdown
+            input.form-elems__addData.js-date(type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019")
+            button.form-elems__choice(type="submit" readonly="readonly")
+              i.material-icons expand_more
+
+          form.form-elems__text-field(name="text-field")
+            legend.form-elems__title filter date dropdown
+            input.form-elems__addData.js-date(type="text" placeholder="ДД.ММ.ГГГГ" value="19 авг-23 авг")
+            button.form-elems__choice(type="submit" readonly="readonly")
+              i.material-icons expand_more
+
+          form.form-elems__text-field(name="text-field")
+            legend.form-elems__title subscription text field
+            input.form-elems__addData.js-date(type="email" placeholder="Email")
+            button.form-elems__choice(type="submit" readonly="readonly")
+              i.material-icons.gradient arrow_forward
+
+          form.form-elems__dropdown(name="dropdown")
+            legend.form-elems__name
+              p.form-elems__title dropdown
+              p.form-elems__text Default
+            input.form-elems__addData(type="text" placeholder="2 спальни, 2 кровати..." list = "conveniences")
+            datalist(id = "conveniences")
+              include ../../components/includes/item-quantity-dropdown/item-quantity-dropdown.pug
+            button.form-elems__choice(type="submit" readonly="readonly")
+              i.material-icons expand_more
+
+          form.form-elems__dropdown(name="dropdown")
+            legend.form-elems__name Expandable checkbox list
+              label.form-elems__label
+                input(type="checkbox" name="ExpandableList[]" value="Завтрак")
+                span.form-elems__span Завтрак
+              label.form-elems__label
+                input(type="checkbox" name="ExpandableList[]" value="Письменный стол")
+                span.form-elems__span Письменный стол
+              label.form-elems__label
+                input(type="checkbox" name="ExpandableList[]" value="Стул для кормления")
+                span.form-elems__span Стул для кормления
+              label.form-elems__label
+                input(type="checkbox" name="ExpandableList[]" value="Кроватка")
+                span.form-elems__span Кроватка
+              label.form-elems__label
+                input(type="checkbox" name="ExpandableList[]" value="Телевизор")
+                span.form-elems__span Телевизор
+              label.form-elems__label
+                input(type="checkbox" name="ExpandableList[]" value="Шампунь")
+                span.form-elems__span Шампунь
+
+          .advantages
+            .advantages__columns
+              i.advantages__item.material-icons insert_emoticon
+              .advantages__content
+                p.advantages__title Комфорт
+                p.advantages__text Шумопоглощающие стены
+
+          .advantages
+            .advantages__columns
+              i.advantages__item.material-icons location_city
+              .advantages__content
+                p.advantages__title Удобство
+                p.advantages__text Окно в каждой из спален
+
+        .form-elems__column
+        .form-elems__column
+
+
+
+
+
+
+
+      //- .columns
+      //-   .columns__left-side
+      //-     section.columns__column1.colored-blocks
+      //-       - for(var i = 1; i < 8; i++) {
+      //-         .colored-blocks__colored-block(class=`colored-blocks__colored-block${i}`)
+      //-         - }
+      //-     section.columns__column2.text-blocks
+      //-       each val,  key in {"Dark Shade 100%": "#1F2041", "Dark Shade 75%": "#1F2041", "Dark Shade 50%": "#1F2041", "Dark Shade 25%": "#1F2041", "Dark Shade 5%": "#1F2041", "Purple": "#BC9CFF", "Green": "#6FCF97"}
+      //-         span.text-blocks__name=key
+      //-         span.text-blocks__color=val
+      //-   .columns__right-side
+      //-     section.columns__column3.font-name-blocks
+      //-       each val,index in ["H1", "H2", "H3", "Body"]
+      //-         span.font-name-blocks__tag-name(class=`font-name-blocks__tag-name${index}`)=val
+      //-     section.columns__column4.font-text-blocks
+      //-       - var exm=["This one is the sub-section or widget title", "Next one is the item title inside widgets", "This is a label or CTA text", "This is the body text which is used for most of the design, like paragraphs, lists, etc."]
+      //-         each i,index in exm
+                //- span.font-text-blocks__font-example(class=`font-text-blocks__font-example${index}`)=i

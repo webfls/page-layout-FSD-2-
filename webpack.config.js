@@ -46,7 +46,7 @@ const devServer = () => {
       compress: true,
       hot: true,
       port: 3000,
-      index: 'headers-footers-page.html',
+      index: 'form-elements-page.html',
     }
   }
   return devOptions
@@ -78,8 +78,12 @@ const allPlugins = () => {
         //   from: srcVar + '/pages/color-type-page/img',
         //   to: distVar + '/img',
         // },
+        // {
+        //   from: srcVar + '/pages/headers-footers-page/img',
+        //   to: distVar + '/img',
+        // },
         {
-          from: srcVar + '/pages/headers-footers-page/img',
+          from: srcVar + '/pages/form-elements-page/img',
           to: distVar + '/img',
         },
       ],
@@ -90,15 +94,25 @@ const allPlugins = () => {
     //   filename: 'color-type-page.html',
     //   inject: true,
     // }),
+    // new HtmlWebpackPlugin({
+    //   favicon: srcVar + '/pages/headers-footers-page/favicon.ico',
+    //   template: srcVar + '/pages/headers-footers-page/headers-footers-page.pug',
+    //   filename: 'headers-footers-page.html',
+    //   inject: true,
+    // }),
     new HtmlWebpackPlugin({
-      favicon: srcVar + '/pages/headers-footers-page/favicon.ico',
-      template: srcVar + '/pages/headers-footers-page/headers-footers-page.pug',
-      filename: 'headers-footers-page.html',
+      favicon: srcVar + '/pages/form-elements-page/favicon.ico',
+      template: srcVar + '/pages/form-elements-page/form-elements-page.pug',
+      filename: 'form-elements-page.html',
       inject: true,
     }),
     new MiniCssExtractPlugin({
       filename: filename('css'),
       chunkFilename: '[id].css',
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
     }),
   ]
 
@@ -131,10 +145,14 @@ module.exports = {
   resolve: {
     alias: {
       '@color-type-page': path.resolve(__dirname, 'src/pages/color-type-page/'),
+      '@form-elements-page': path.resolve(__dirname, 'src/pages/form-elements-page/'),
       '@headers-footers-page': path.resolve(
         __dirname,
         'src/pages/headers-footers-page/'
       ),
+      '@blocks': path.resolve(__dirname, 'src/components/blocks/'),
+      '@includes': path.resolve(__dirname, 'src/components/includes/'),
+      '@layouts': path.resolve(__dirname, 'src/components/layouts/'),
     },
   },
 
@@ -147,9 +165,13 @@ module.exports = {
     //   '@babel/polyfill',
     //   './pages/color-type-page/color-type-page.js',
     // ],
-    headersFootersPage: [
+    // headersFootersPage: [
+    //   '@babel/polyfill',
+    //   './pages/headers-footers-page/headers-footers-page.js',
+    // ],
+    formElementsPage: [
       '@babel/polyfill',
-      './pages/headers-footers-page/headers-footers-page.js',
+      './pages/form-elements-page/form-elements-page.js',
     ],
   },
 
