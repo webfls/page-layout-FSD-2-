@@ -13,8 +13,6 @@
     flex-direction: column;
   }
 
-  &__column {}
-
   &__row {
     display: flex;
   }
@@ -100,15 +98,13 @@
       @include placeholder {
         color: rgba(31, 32, 65, 0.75);
       }
-
-
     }
-
-
   }
 
   &__fieldset {
+
     // display: flex;
+
 
     &:hover {
       display: flex;
@@ -120,6 +116,17 @@
     width: 100%;
     border: none;
     flex-direction: column;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      right: 50px;
+      width: 270px;
+      height: 25px;
+      background-color: #fff;
+      display: block;
+    }
   }
 
   &__choice {
@@ -211,6 +218,7 @@
       content: '';
       width: 280px;
       height: 1px;
+      display: block;
       background-color: rgba(31, 32, 65, 0.1);
       position: absolute;
       bottom: -17px;
