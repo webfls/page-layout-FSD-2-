@@ -19,3 +19,48 @@
   font-weight: normal;
   font-size: 24px;
 }
+
+@mixin FontAwesome() {
+  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 22px;
+}
+
+@mixin Button-Input($width, $height, $border: 1px solid rgba(31, 32, 65, 0.25), $br: 4px, ) {
+  width: $width;
+  height: $height;
+  border-radius: $br;
+  border: $border;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::placeholder {
+    @content;
+  }
+}
+
+@mixin gradient() {
+  background: -moz-linear-gradient(180deg, #bc9cff, #8ba4f9);
+  background: -webkit-linear-gradient(180deg, #bc9cff, #8ba4f9);
+  background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
