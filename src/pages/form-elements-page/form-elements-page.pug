@@ -65,11 +65,11 @@ block content
             button.form-elems__choice(readonly="readonly")
               i.material-icons expand_more
 
-          form.form-elems__text-field.form-elems__text_list(name="dropdown")
-            legend.form-elems__text.form-elems__text_title.form-elems__text_bold.form-elems__name Expandable checkbox list
+          form.form-elems__text-field(name="dropdown")
+            legend.form-elems__text.form-elems__text_title.form-elems__text_bold Expandable checkbox list
             button.form-elems__choice.form-elems__choice_pos(readonly="readonly")
               i.material-icons expand_more
-            fieldset.form-elems__fieldset
+            fieldset.form-elems__fieldset.form-elems__fieldset_appear
               input.form-elems__custom-checkbox(type="checkbox" id="check1" name="ExpandableList[]" value="Завтрак")
               label.form-elems__label.form-elems__text.form-elems__text_list(for="check1") Завтрак
               input.form-elems__custom-checkbox(type="checkbox" id="check2" name="ExpandableList[]" value="Письменный стол")
@@ -98,9 +98,34 @@ block content
                 p.advantages__text Окно в каждой из спален
 
         .form-elems__column
+
+          form.form-elems__text-field(name="Checkbox-Buttons")
+            legend.form-elems__text.form-elems__text_title.form-elems__text_bold Checkbox Buttons
+            fieldset.form-elems__fieldset
+              input.form-elems__custom-checkbox(type="checkbox" id="check31" name="ExpandableList2[]" value="Можно курить")
+              label.form-elems__label.form-elems__text.form-elems__text_list(for="check31") Можно курить
+              input.form-elems__custom-checkbox(type="checkbox" id="check32" name="ExpandableList2[]" value="Можно с питомцами")
+              label.form-elems__label.form-elems__text.form-elems__text_list(for="check32") Можно с питомцами
+              input.form-elems__custom-checkbox(type="checkbox" id="check33" name="ExpandableList2[]" value="Можно пригласить гостей (до 10 человек)")
+              label.form-elems__label.form-elems__text.form-elems__text_list(for="check33") Можно пригласить гостей (до 10 человек)
+
+          form.form-elems__text-field(name="Toggle")
+            legend.form-elems__text.form-elems__text_title.form-elems__text_bold Radio Buttons
+            fieldset.form-elems__toggle-item
+              input.form-elems__radiobtn(type="radio" id="item1" name="radio" value="Мужчина")
+              label.form-elems__label.form-elems__text.form-elems__text_list(for="item1") Мужчина
+            fieldset.form-elems__toggle-item
+              input.form-elems__radiobtn(type="radio" id="item2" name="radio" value="Женщина")
+              label.form-elems__label.form-elems__text.form-elems__text_list(for="item2") Женщина
+
+          form.form-elems__text-field(name="Toggle")
+            legend.form-elems__text.form-elems__text_title.form-elems__text_bold Toggle
+            fieldset.form-elems__toggle-item
+              input.form-elems__radiobtn.form-elems__radiobtn_oval.form-elems__radiobtn_oval-active(type="checkbox" id="item3" name="radio" value="Получать спецпредложения")
+              label.form-elems__label.form-elems__text.form-elems__text_list(for="item3") Получать спецпредложения
+            fieldset.form-elems__toggle-item
+              input.form-elems__radiobtn.form-elems__radiobtn_oval(type="checkbox" id="item4" name="radio" value="Получать спецпредложения")
+              label.form-elems__label.form-elems__text.form-elems__text_list(for="item4") Получать спецпредложения
+
+
         .form-elems__column
-
-
-
-
-
