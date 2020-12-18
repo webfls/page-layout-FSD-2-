@@ -1,0 +1,33 @@
+.irs-min,
+.irs-max,
+.irs-from,
+.irs-to,
+.irs-single {
+  opacity: 0;
+}
+
+.irs--flat .irs-line {
+  height: 6px;
+  background-color: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.irs--flat .irs-bar {
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+}
+
+.irs--flat .irs-handle {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+
+  & i:first-child {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+}
