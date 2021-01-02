@@ -338,6 +338,7 @@
   @include Montserrat($fw:400, $fsz:14px);
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
+  // vertical-align: top;
 
   &_title {
     font-size: 12px;
@@ -401,6 +402,10 @@
 
     &_extra_top-bottom2 {
       margin: 20px 0 196px 0;
+    }
+
+    &_extra_top-bottom3 {
+      margin: 40.56px 0 40px 0;
     }
   }
 }
@@ -559,4 +564,109 @@
     padding: 0 10px;
     max-width: 653px;
   }
+}
+
+.btn {
+  padding: 14px 21px 15px 19px;
+  border-radius: 22px;
+  border: none;
+  min-width: 99px;
+  position: relative;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &__pos {
+    margin: 16px 19px 30px 0;
+
+    &:last-child {
+      margin: 16px 0 30px 0;
+    }
+  }
+
+  &__pos2 {
+    margin: 0 19px 30px 0;
+
+    &:last-child {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &_color {
+    &_white {
+      color: white;
+    }
+
+    &_lilac {
+      color: #BC9CFF;
+    }
+  }
+
+  &_bc {
+    &_white {
+      background-color: #fff;
+    }
+
+    &_lilac {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+
+  &_focused {
+    opacity: 0.5;
+  }
+
+  &_large {
+    min-width: 320px;
+    padding: 14px 20px 15px 20px;
+  }
+
+  &_border_lilac {
+    padding: 14px 21px 15px 19px;
+    background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
+
+    &::after {
+      content: 'Click me';
+      position: absolute;
+      padding: 12px 19px 13px 17px;
+      display: inline-block;
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      right: 2px;
+      background-color: #fff;
+      color: #BC9CFF;
+      border-radius: 22px;
+    }
+  }
+}
+
+.link-click {
+  color: #BC9CFF;
+  cursor: pointer;
+
+  &__pos {
+    margin: 1px 20px 30px 0;
+
+    &:last-child {
+      margin: 1px 0 30px 0;
+    }
+  }
+
+  &:hover {
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  &_hover {
+    color: rgba(31, 32, 65, 0.5);
+  }
+}
+
+.arrow-submit {
+  @include arrow();
 }
