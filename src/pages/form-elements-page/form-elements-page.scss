@@ -572,6 +572,7 @@
   border: none;
   min-width: 99px;
   position: relative;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.75;
@@ -642,6 +643,7 @@
       background-color: #fff;
       color: #BC9CFF;
       border-radius: 22px;
+
     }
   }
 }
