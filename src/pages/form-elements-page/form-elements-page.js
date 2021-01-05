@@ -89,3 +89,36 @@ $(".js-range-slider").ionRangeSlider({
     $('.js-data-to').html(data.to);
   },
 });
+
+// pagination Работает неправильно
+$('.js-paginationArrow').on('click', function (e) {
+  e.preventDefault();
+  $('.js-paginationCount').each(function () {
+    var textContent = $(this).text();
+    var newTextContent = parseInt(textContent) + 1;
+    var newTextContent3 = parseInt($('.js-paginationCount3').text()) + 2;
+
+    while (newTextContent3 < $('.js-paginationLast').text()) {
+      $(this).html(newTextContent);
+      return newTextContent;
+    }
+    if (newTextContent3 == $('.js-paginationLast').text()) {
+      $('.js-paginationDots').text($('.js-paginationLast').text() - 1);
+      $('.js-paginationDots').addClass("js-paginationNumber");
+    }
+  });
+
+  if ((parseInt($('.js-paginationCount3').text()) + 2) != $('.js-paginationLast').text()) {
+    $('.js-paginationNumber').removeClass("pagination__number_active");
+    $('.js-paginationNumber').first().addClass("pagination__number_active");
+  } else {
+    // Работает неправильно
+    $('.js-paginationNumber.pagination__number_active').next().addClass("pagination__number_active");
+    $('.js-paginationNumber.pagination__number_active').prev('.js-paginationNumber.pagination__number_active').removeClass("pagination__number_active");
+  }
+});
+
+$('.js-paginationNumber').parent().on('click', '.js-paginationNumber', function () {
+  $('.js-paginationNumber').removeClass("pagination__number_active");
+  $(this).addClass("pagination__number_active");
+});
