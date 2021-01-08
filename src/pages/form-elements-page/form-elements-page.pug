@@ -5,57 +5,57 @@ block title
 block content
   .wrapper.wrapper_white
     include ../../components/includes/logo/logo.pug
-      .form-elems
-        .column
+      .elems
 
-          form.form.form-elems__margins(name="textField1")
-            legend.form__group-legend.form__title
-              span.text.text_title.text_title_bold Text Field
-              span.text.text_title Default
-            input.form__input.form__input-pos(type="email" placeholder="Email")
+        form.form.elems__text-field1(name="textField1")
+          legend.form__group-legend.form__title
+            span.text.text_title.text_title_bold Text Field
+            span.text.text_title Default
+          input.form__input.form__input-pos(type="email" placeholder="Email")
 
-          form.form.form-elems__margins(name="textField2")
-            legend.form__group-legend.form__title
-              span.text.text_title.text_title_bold Text Field
-              span.text.text_title Hover / Focus
-            input.form__input.form__input-pos(type="Text" placeholder="This is pretty awesome")
+        form.form.elems__text-field2(name="textField2")
+          legend.form__group-legend.form__title
+            span.text.text_title.text_title_bold Text Field
+            span.text.text_title Hover / Focus
+          input.form__input.form__input-pos(type="Text" placeholder="This is pretty awesome")
 
-          form.form.form-elems__margins(name="dropdown")
-            legend.text.text_title.text_title_bold.form__title Dropdown
-            input.form__input.form__input-pos.form__input_placeholder_color(type="number" placeholder="Сколько гостей")
+        form.form.elems__dropdown1(name="dropdown")
+          legend.text.text_title.text_title_bold.form__title Dropdown
+          input.form__input.form__input-pos.form__input_placeholder_color(type="number" placeholder="Сколько гостей")
+          button.form__choice(readonly="readonly")
+            i.material-icons expand_more
+
+        form.form.elems__masked-text-field(name="textField3")
+          legend.text.text_title.text_title_bold.form__title masked text field
+          input.form__input.form__input-pos.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ")
+
+        .row.elems__date-dropdown
+          form.form.form_size_s(name="TextField4")
+            legend.text.text_title.text_title_bold.form__title date Dropdown
+            input.form__input.form__input-pos.form__input-pos_size_s.form__input_size_s.form__input_placeholder_color.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ")
             button.form__choice(readonly="readonly")
               i.material-icons expand_more
 
-          form.form.form-elems__margins(name="textField3")
-            legend.text.text_title.text_title_bold.form__title masked text field
-            input.form__input.form__input-pos.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ")
-
-          .row.form-elems__margins_extra_20
-            form.form.form_size_s.form-elems__margins.form-elems__margins_extra_right(name="TextField4")
-              legend.text.text_title.text_title_bold.form__title date Dropdown
-              input.form__input.form__input-pos.form__input-pos_size_s.form__input_size_s.form__input_placeholder_color.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ")
-              button.form__choice(readonly="readonly")
-                i.material-icons expand_more
-
-            form.form.form_size_s.form-elems__margins.form-elems__margins_extra_right(name="TextField5")
-              legend.text.text_title.text_title_bold.form__title date Dropdown
-              input.form__input.form__input-pos.form__input-pos_size_s.form__input_size_s.form__input_placeholder_color.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019")
-              button.form__choice(readonly="readonly")
-                i.material-icons expand_more
-
-          form.form.form-elems__margins.form-elems__margins_extra_20(name="textField6")
-            legend.text.text_title.text_title_bold.form__title filter date dropdown
-            input.form__input.form__input-pos.form__input_placeholder_color.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ" value="19 авг-23 авг")
+          form.form.form_size_s(name="TextField5")
+            legend.text.text_title.text_title_bold.form__title date Dropdown
+            input.form__input.form__input-pos.form__input-pos_size_s.form__input_size_s.form__input_placeholder_color.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019")
             button.form__choice(readonly="readonly")
               i.material-icons expand_more
 
-          form.form.form-elems__margins.form-elems__margins_extra_20(name="textField7")
-            legend.text.text_title.text_title_bold.form__title subscription text field
-            input.form__input.form__input-pos(type="email" placeholder="Email")
-            button.form__choice(type="submit" readonly="readonly")
-              i.material-icons.gradient arrow_forward
-          //- TODO:
-          form.form.form-elems__margins.form-elems__margins_extra_80(name="dropdown2")
+        form.form.elems__filter-date-dropdown(name="textField6")
+          legend.text.text_title.text_title_bold.form__title filter date dropdown
+          input.form__input.form__input-pos.form__input_placeholder_color.js-date-mask(type="text" placeholder="ДД.ММ.ГГГГ" value="19 авг-23 авг")
+          button.form__choice(readonly="readonly")
+            i.material-icons expand_more
+
+        form.form.elems__subscription-text-field(name="textField7")
+          legend.text.text_title.text_title_bold.form__title subscription text field
+          input.form__input.form__input-pos(type="email" placeholder="Email")
+          button.form__choice(type="submit" readonly="readonly")
+            i.material-icons.gradient arrow_forward
+        //- TODO:
+        .elems__dropdown2
+          form.form(name="dropdown2")
             legend.form__group-legend.form__title
               span.text.text_title.text_title_bold dropdown
               span.text.text_title Default
@@ -65,42 +65,53 @@ block content
             button.form__choice(readonly="readonly")
               i.material-icons expand_more
 
-          form.form.form-elems__margins_extra_top-bottom(name="dropdown3")
-            legend.text.text_title.text_title_bold.form__title_expand-list Expandable checkbox list
-            button.form__choice.form__choice_pos(readonly="readonly")
+          form.form(name="dropdown2.1")
+            legend.form__group-legend.form__title
+              span.text.text_title.text_title_bold dropdown
+              span.text.text_title Expanded
+            input.form__input.form__input-pos.form__input_placeholder_color(type="text" placeholder="2 спальни, 2 кровати..." list = "conveniences")
+            datalist(id = "conveniences")
+              //- include ../../components/includes/item-quantity-dropdown/item-quantity-dropdown.pug
+            button.form__choice(readonly="readonly")
               i.material-icons expand_more
-            fieldset.form__fieldset.form__fieldset_expand-list
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check1" name="ExpandableList[]" value="Завтрак")
-              label.form__label.text(for="check1") Завтрак
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check2" name="ExpandableList[]" value="Письменный стол")
-              label.form__label.text(for="check2") Письменный стол
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check3" name="ExpandableList[]" value="Стул для кормления")
-              label.form__label.text(for="check3") Стул для кормления
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check4" name="ExpandableList[]" value="Кроватка")
-              label.form__label.text(for="check4") Кроватка
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check5" name="ExpandableList[]" value="Телевизор")
-              label.form__label.text(for="check5") Телевизор
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check6" name="ExpandableList[]" value="Шампунь")
-              label.form__label.text(for="check6") Шампунь
 
-          form.form.form-elems__margins_extra_top-bottom(name="dropdown4")
-            legend.text.text_title.text_title_bold.form__title_expand-list.form__title_expand-list_deployed Expandable checkbox list
-            button.form__choice.form__choice_pos(readonly="readonly")
-              i.material-icons expand_more
-            fieldset.form__fieldset.form__fieldset_expand-list.form__fieldset_expand-list_deployed
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check21" name="ExpandableList4[]" value="Завтрак")
-              label.form__label.text(for="check21") Завтрак
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check22" name="ExpandableList4[]" value="Письменный стол")
-              label.form__label.text(for="check22") Письменный стол
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check23" name="ExpandableList4[]" value="Стул для кормления")
-              label.form__label.text(for="check23") Стул для кормления
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check24" name="ExpandableList4[]" value="Кроватка")
-              label.form__label.text(for="check24") Кроватка
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check25" name="ExpandableList4[]" value="Телевизор")
-              label.form__label.text(for="check25") Телевизор
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check26" name="ExpandableList4[]" value="Шампунь")
-              label.form__label.text(for="check26") Шампунь
+        form.form.elems__expandable-checkbox-list1(name="dropdown3")
+          legend.text.text_title.text_title_bold.form__title_expand-list Expandable checkbox list
+          button.form__choice.form__choice_pos(readonly="readonly")
+            i.material-icons expand_more
+          fieldset.form__fieldset.form__fieldset_expand-list
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check1" name="ExpandableList[]" value="Завтрак")
+            label.form__label.text(for="check1") Завтрак
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check2" name="ExpandableList[]" value="Письменный стол")
+            label.form__label.text(for="check2") Письменный стол
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check3" name="ExpandableList[]" value="Стул для кормления")
+            label.form__label.text(for="check3") Стул для кормления
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check4" name="ExpandableList[]" value="Кроватка")
+            label.form__label.text(for="check4") Кроватка
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check5" name="ExpandableList[]" value="Телевизор")
+            label.form__label.text(for="check5") Телевизор
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check6" name="ExpandableList[]" value="Шампунь")
+            label.form__label.text(for="check6") Шампунь
 
+        form.form.elems__expandable-checkbox-list2(name="dropdown4")
+          legend.text.text_title.text_title_bold.form__title_expand-list.form__title_expand-list_deployed Expandable checkbox list
+          button.form__choice.form__choice_pos(readonly="readonly")
+            i.material-icons expand_more
+          fieldset.form__fieldset.form__fieldset_expand-list.form__fieldset_expand-list_deployed
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check21" name="ExpandableList4[]" value="Завтрак")
+            label.form__label.text(for="check21") Завтрак
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check22" name="ExpandableList4[]" value="Письменный стол")
+            label.form__label.text(for="check22") Письменный стол
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check23" name="ExpandableList4[]" value="Стул для кормления")
+            label.form__label.text(for="check23") Стул для кормления
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check24" name="ExpandableList4[]" value="Кроватка")
+            label.form__label.text(for="check24") Кроватка
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check25" name="ExpandableList4[]" value="Телевизор")
+            label.form__label.text(for="check25") Телевизор
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check26" name="ExpandableList4[]" value="Шампунь")
+            label.form__label.text(for="check26") Шампунь
+
+        .elems__advantages
           .advantages.advantages__pos
             .advantages__columns
               i.material-icons.gradient.advantages__item insert_emoticon
@@ -115,127 +126,130 @@ block content
                 p.advantages__text.advantages__text_title Удобство
                 p.advantages__text Окно в каждой из спален
 
-        .column
+        form.form.elems__checkbox-buttons(name="checkboxButtons")
+          legend.text.text_title.text_title_bold.form__title Checkbox Buttons
+          fieldset.form__fieldset.form__fieldset_checkboxButtons
+            input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check31" name="ExpandableList2[]" value="Можно курить")
+            label.form__label.text(for="check31") Можно курить
+            input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check32" name="ExpandableList2[]" value="Можно с питомцами" checked)
+            label.form__label.text(for="check32") Можно с питомцами
+            input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check33" name="ExpandableList2[]" value="Можно пригласить гостей (до 10 человек)" checked)
+            label.form__label.form__label_width_192.text(for="check33") Можно пригласить гостей (до 10 человек)
 
-          form.form.form-elems__margins(name="checkboxButtons")
-            legend.text.text_title.text_title_bold.form__title Checkbox Buttons
-            fieldset.form__fieldset.form__fieldset_checkboxButtons
-              input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check31" name="ExpandableList2[]" value="Можно курить")
-              label.form__label.text(for="check31") Можно курить
-              input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check32" name="ExpandableList2[]" value="Можно с питомцами" checked)
-              label.form__label.text(for="check32") Можно с питомцами
-              input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check33" name="ExpandableList2[]" value="Можно пригласить гостей (до 10 человек)" checked)
-              label.form__label.text(for="check33") Можно пригласить гостей (до 10 человек)
+        form.form.elems__radio-buttons(name="toggle1")
+          legend.text.text_title.text_title_bold.form__title Radio Buttons
+          fieldset.form__fieldset_toggle-item
+            input.form__input_btn.form__input_btn_radio(type="radio" checked id="item1" name="radio" value="Мужчина")
+            label.form__label.text(for="item1") Мужчина
+          fieldset.form__fieldset_toggle-item
+            input.form__input_btn.form__input_btn_radio(type="radio" id="item2" name="radio" value="Женщина")
+            label.form__label.text(for="item2") Женщина
 
-          form.form.form-elems__margins(name="toggle1")
-            legend.text.text_title.text_title_bold.form__title Radio Buttons
-            fieldset.form__fieldset_toggle-item
-              input.form__input_btn.form__input_btn_radio(type="radio" checked id="item1" name="radio" value="Мужчина")
-              label.form__label.text(for="item1") Мужчина
-            fieldset.form__fieldset_toggle-item
-              input.form__input_btn.form__input_btn_radio(type="radio" id="item2" name="radio" value="Женщина")
-              label.form__label.text(for="item2") Женщина
+        form.form.elems__toggle(name="toggle2")
+          legend.text.text_title.text_title_bold.form__title Toggle
+          fieldset.form__fieldset_toggle-item
+            input.form__input_btn.form__input_btn_radio.form__input_btn_radio-oval(type="checkbox" id="item3" name="radio" checked value="Получать спецпредложения")
+            label.form__label.text(for="item3") Получать спецпредложения
+          fieldset.form__fieldset_toggle-item.form__fieldset_toggle-item_pos
+            input.form__input_btn.form__input_btn_radio.form__input_btn_radio-oval(type="checkbox" id="item4" name="radio" value="Получать спецпредложения")
+            label.form__label.text(for="item4") Получать спецпредложения
 
-          form.form.form-elems__margins.form-elems__margins_less_top(name="toggle2")
-            legend.text.text_title.text_title_bold.form__title Toggle
-            fieldset.form__fieldset_toggle-item
-              input.form__input_btn.form__input_btn_radio.form__input_btn_radio-oval(type="checkbox" id="item3" name="radio" checked value="Получать спецпредложения")
-              label.form__label.text(for="item3") Получать спецпредложения
-            fieldset.form__fieldset_toggle-item.form__fieldset_toggle-item_pos
-              input.form__input_btn.form__input_btn_radio.form__input_btn_radio-oval(type="checkbox" id="item4" name="radio" value="Получать спецпредложения")
-              label.form__label.text(for="item4") Получать спецпредложения
+        form.form.elems__like-button(name="likeButton")
+          legend.text.text_title.text_title_bold.form__title Like Button
+          .row
+            fieldset.form__fieldset.form__fieldset_like-item
+              input.form__input_btn.form__input_btn_like.js-likebtn(type="checkbox" id="like1" name="like")
+              label.form__label.form__label_like.text.js-like(for="like1")
+                i.form__heart.material-icons.js-heart favorite_border
+                span.form__number-like.js-number-like 2
+            fieldset.form__fieldset.form__fieldset_like-item
+              input.form__input_btn.form__input_btn_like(type="checkbox" id="like2" name="like" checked)
+              label.form__label.form__label_like.text.form__label_like_checked.js-like(for="like2")
+                i.form__heart.material-icons.js-heart favorite
+                span.form__number-like.js-number-like 12
 
-          form.form.form-elems__margins_extra_top-bottom(name="likeButton")
-            legend.text.text_title.text_title_bold.form__title Like Button
-            .row
-              fieldset.form__fieldset.form__fieldset_like-item
-                input.form__input_btn.form__input_btn_like.js-likebtn(type="checkbox" id="like1" name="like")
-                label.form__label.form__label_like.text.js-like(for="like1")
-                  i.form__heart.material-icons.js-heart favorite_border
-                  span.form__number-like.js-number-like 2
-              fieldset.form__fieldset.form__fieldset_like-item
-                input.form__input_btn.form__input_btn_like(type="checkbox" id="like2" name="like" checked)
-                label.form__label.form__label_like.text.form__label_like_checked.js-like(for="like2")
-                  i.form__heart.material-icons.js-heart favorite
-                  span.form__number-like.js-number-like 12
+        form.form2.elems__rate-button(name="rateButton")
+          legend.text.text_title.text_title_bold.form__title rate button
+          .row
+            fieldset.form__fieldset.form__fieldset_rate-item
+              input.form__input_star.js-rate(id="star-rating-5" type="radio" name="rating" value="5")
+              label.form__label_star.material-icons(for="star-rating-5") star_border
+              input.form__input_star.js-rate(id="star-rating-4" type="radio" name="rating" value="4" checked)
+              label.form__label_star.material-icons(for="star-rating-4") star_border
+              input.form__input_star.js-rate(id="star-rating-3" type="radio" name="rating" value="3" checked)
+              label.form__label_star.material-icons(for="star-rating-3") star_border
+              input.form__input_star.js-rate(id="star-rating-2" type="radio" name="rating" value="2" checked)
+              label.form__label_star.material-icons(for="star-rating-2") star_border
+              input.form__input_star.js-rate(id="star-rating-1" type="radio" name="rating" value="1" checked)
+              label.form__label_star.material-icons(for="star-rating-1") star_border
+            fieldset.form__fieldset.form__fieldset_rate-item
+              input.form__input_star.js-rate(id="star-rating-15" type="radio" name="rating" value="5" checked)
+              label.form__label_star.material-icons(for="star-rating-15") star_border
+              input.form__input_star.js-rate(id="star-rating-14" type="radio" name="rating" value="4" checked)
+              label.form__label_star.material-icons(for="star-rating-14") star_border
+              input.form__input_star.js-rate(id="star-rating-13" type="radio" name="rating" value="3" checked)
+              label.form__label_star.material-icons(for="star-rating-13") star_border
+              input.form__input_star.js-rate(id="star-rating-12" type="radio" name="rating" value="2" checked)
+              label.form__label_star.material-icons(for="star-rating-12") star_border
+              input.form__input_star.js-rate(id="star-rating-11" type="radio" name="rating" value="1" checked)
+              label.form__label_star.material-icons(for="star-rating-11") star_border
 
-          form.form.form-elems__margins_extra_top-bottom2(name="rateButton")
-            legend.text.text_title.text_title_bold.form__title rate button
-            .row
-              fieldset.form__fieldset.form__fieldset_rate-item
-                input.form__input_star.js-rate(id="star-rating-5" type="radio" name="rating" value="5")
-                label.form__label_star.material-icons(for="star-rating-5") star_border
-                input.form__input_star.js-rate(id="star-rating-4" type="radio" name="rating" value="4" checked)
-                label.form__label_star.material-icons(for="star-rating-4") star_border
-                input.form__input_star.js-rate(id="star-rating-3" type="radio" name="rating" value="3" checked)
-                label.form__label_star.material-icons(for="star-rating-3") star_border
-                input.form__input_star.js-rate(id="star-rating-2" type="radio" name="rating" value="2" checked)
-                label.form__label_star.material-icons(for="star-rating-2") star_border
-                input.form__input_star.js-rate(id="star-rating-1" type="radio" name="rating" value="1" checked)
-                label.form__label_star.material-icons(for="star-rating-1") star_border
-              fieldset.form__fieldset.form__fieldset_rate-item
-                input.form__input_star.js-rate(id="star-rating-15" type="radio" name="rating" value="5" checked)
-                label.form__label_star.material-icons(for="star-rating-15") star_border
-                input.form__input_star.js-rate(id="star-rating-14" type="radio" name="rating" value="4" checked)
-                label.form__label_star.material-icons(for="star-rating-14") star_border
-                input.form__input_star.js-rate(id="star-rating-13" type="radio" name="rating" value="3" checked)
-                label.form__label_star.material-icons(for="star-rating-13") star_border
-                input.form__input_star.js-rate(id="star-rating-12" type="radio" name="rating" value="2" checked)
-                label.form__label_star.material-icons(for="star-rating-12") star_border
-                input.form__input_star.js-rate(id="star-rating-11" type="radio" name="rating" value="1" checked)
-                label.form__label_star.material-icons(for="star-rating-11") star_border
+        form4.elems__rich-checkbox-buttons(name="richCheckboxButtons")
+          legend.text.text_title.text_title_bold.form__title rich Checkbox Buttons
+          fieldset.form__fieldset
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check41" name="ExpandableList3[]" value="Широкий коридор")
+            label.form__label.form__label_check.text.text_title_bold.text_title_lighter(for="check41") Широкий коридор
+            span.form__descr.text.text_small Ширина коридоров в номере не менее 91 см.
+            input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check42" name="ExpandableList3[]" value="Помощник для инвалидов")
+            label.form__label.form__label_check.text.text_title_bold.text_title_lighter(for="check42") Помощник для инвалидов
+            span.form__descr.text.text_small На 1 этаже вас встретит специалист  и проводит до номера.
 
-          form(name="richCheckboxButtons")
-            legend.text.text_title.text_title_bold.form__title rich Checkbox Buttons
-            fieldset.form__fieldset
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check41" name="ExpandableList3[]" value="Широкий коридор")
-              label.form__label.form__label_check.text.text_title_bold.text_title_lighter(for="check41") Широкий коридор
-              span.form__descr.text.text_small Ширина коридоров в номере не менее 91 см.
-              input.form__input.form__input_btn.form__input_btn_checkbox(type="checkbox" id="check42" name="ExpandableList3[]" value="Помощник для инвалидов")
-              label.form__label.form__label_check.text.text_title_bold.text_title_lighter(for="check42") Помощник для инвалидов
-              span.form__descr.text.text_small На 1 этаже вас встретит специалист  и проводит до номера.
+        .feedback.elems__feedback
+          .row
+            .feedback__icon
+            .text.text_feedback
+              .feedback__user-name Мурад Сарафанов
+              .feedback__time 5 дней назад
+          p.text.text_feedback.feedback__content Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
-          .feedback.feedback__pos
-            .row
-              .feedback__icon
-              .text.text_feedback
-                .feedback__user-name Мурад Сарафанов
-                .feedback__time 5 дней назад
-            p.text.text_feedback.feedback__content Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+        form.form.elems__range-slider(name="rangeSlider")
+          legend.form__group-legend.form__title
+            span.text.text_title.text_title_bold Range Slider
+            .group
+              span.text.text_title.js-data-from 5 000
+              span.text.text_title ₽
+              span.text.text_title  -
+              span.text.text_title.js-data-to 10 000
+              span.text.text_title ₽
+          input(type="text" class="js-range-slider" name="my_range" value="")
 
-        .column
-          form.form.form_width_266(name="rangeSlider")
-            legend.form__group-legend.form__title
-              span.text.text_title.text_title_bold Range Slider
-              .group
-                span.text.text_title.js-data-from 5 000
-                span.text.text_title ₽
-                span.text.text_title  -
-                span.text.text_title.js-data-to 10 000
-                span.text.text_title ₽
-            input(type="text" class="js-range-slider" name="my_range" value="")
+        .buttons.elems__buttons
+          span.text.text_title.text_title_bold buttons
+          .row
+            button.text.text_title.text_title_bold.btn.btn__pos.btn_color_white.btn_bc_lilac click me
+            button.text.text_title.text_title_bold.btn.btn__pos.btn_color_white.btn_bc_lilac.btn_focused click me
+          .row
+            button.text.text_title.text_title_bold.btn.btn__pos.btn__pos2.btn_border_lilac.btn_color_lilac click me
+            button.text.text_title.text_title_bold.btn.btn__pos.btn__pos2.btn_border_lilac.btn_color_lilac.btn_focused click me
+          .row
+            .text.text_title.text_title_bold.link-click.link-click__pos click me
+            .text.text_title.text_title_bold.link-click.link-click_hover.link-click__pos click me
+          button.text.text_title.text_title_bold.btn.btn_large.btn_color_white.btn_bc_lilac перейти к оплате
+              i.material-icons.arrow-submit arrow_forward
 
-          .buttons.form-elems__margins_extra_top-bottom3
-            span.text.text_title.text_title_bold buttons
-            .row
-              button.text.text_title.text_title_bold.btn.btn__pos.btn_color_white.btn_bc_lilac click me
-              button.text.text_title.text_title_bold.btn.btn__pos.btn_color_white.btn_bc_lilac.btn_focused click me
-            .row
-              button.text.text_title.text_title_bold.btn.btn__pos.btn__pos2.btn_border_lilac.btn_color_lilac click me
-              button.text.text_title.text_title_bold.btn.btn__pos.btn__pos2.btn_border_lilac.btn_color_lilac.btn_focused click me
-            .row
-              .text.text_title.text_title_bold.link-click.link-click__pos click me
-              .text.text_title.text_title_bold.link-click.link-click_hover.link-click__pos click me
-            button.text.text_title.text_title_bold.btn.btn_large.btn_color_white.btn_bc_lilac перейти к оплате
-                i.material-icons.arrow-submit arrow_forward
+        .pagination.elems__pagination
+          span.text.text_title.text_title_bold pagination
+          .row.row__pagination-pos.js-parent
+            .text.text_title.pagination__number.pagination__number_active.js-paginationNumber.js-paginationCount 1
+            .text.text_title.pagination__number.js-paginationNumber.js-paginationCount 2
+            .text.text_title.pagination__number.js-paginationNumber.js-paginationCount.js-paginationCount3 3
+            .text.text_title.pagination__number.js-paginationDots ...
+            .text.text_title.pagination__number.js-paginationNumber.js-paginationLast 15
+            .arrow-submit.pagination__number.pagination__number_arrow.material-icons.js-paginationArrow arrow_forward
+          .text.text_feedback 1 – 12 из 100+ вариантов аренды
 
-          .pagination
-            span.text.text_title.text_title_bold pagination
-            .row.row__pagination-pos.js-parent
-              .text.text_title.pagination__number.pagination__number_active.js-paginationNumber.js-paginationCount 1
-              .text.text_title.pagination__number.js-paginationNumber.js-paginationCount 2
-              .text.text_title.pagination__number.js-paginationNumber.js-paginationCount.js-paginationCount3 3
-              .text.text_title.pagination__number.js-paginationDots ...
-              .text.text_title.pagination__number.js-paginationNumber.js-paginationLast 15
-              .arrow-submit.pagination__number.pagination__number_arrow.material-icons.js-paginationArrow arrow_forward
-            .text.text_feedback 1 – 12 из 100+ вариантов аренды
+        .bullet-List.elems__bullet-list
+          ul.text.text_title.text_title_bold.bullet-List__ul bullet list
+            li.text.text_feedback.bullet-List__item Нельзя с питомцами
+            li.text.text_feedback.bullet-List__item Без вечеринок и мероприятий
+            li.text.text_feedback.bullet-List__item Время прибытия — после 13:00, а выезд до 12:00
