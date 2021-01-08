@@ -210,7 +210,13 @@ block content
             .text.text_feedback
               .feedback__user-name Мурад Сарафанов
               .feedback__time 5 дней назад
-          p.text.text_feedback.feedback__content Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+          .row
+            fieldset.form__fieldset.form__fieldset_like-item.form__fieldset_like-item2
+              input.form__input_btn.form__input_btn_like(type="checkbox" id="like3" name="like" checked)
+              label.form__label.form__label_like.text.form__label_like_checked.js-like(for="like3")
+                i.form__heart.material-icons.js-heart favorite
+                span.form__number-like.js-number-like 12
+            p.text.text_feedback.feedback__content Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
         form.form.elems__range-slider(name="rangeSlider")
           legend.form__group-legend.form__title

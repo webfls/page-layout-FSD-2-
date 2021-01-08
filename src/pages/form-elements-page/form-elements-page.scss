@@ -272,9 +272,13 @@
       min-width: 40px;
       margin: 11px 0 0 0;
 
-      &:not(:last-child) {
+      &:not(:last-of-type) {
         margin-right: 10px;
       }
+    }
+
+    &_like-item2 {
+      margin-left: 3.975px;
     }
 
     &_rate-item {
@@ -650,7 +654,7 @@
   }
 
   &__content {
-    margin: 10px 0 0 47.6px;
+    margin: 10px 0 0 0;
     padding: 0 10px;
     max-width: 653px;
   }
