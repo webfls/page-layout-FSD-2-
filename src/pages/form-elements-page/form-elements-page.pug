@@ -24,6 +24,17 @@ block content
           input.form__input.form__input-pos.form__input_placeholder_color(type="number" placeholder="Сколько гостей")
           button.form__choice(readonly="readonly")
             i.material-icons expand_more
+          .iqdropdown
+            p.iqdropdown-selection
+            .iqdropdown-menu
+              .iqdropdown-menu-option(data-id="item1" data-defaultcount="0" data-mincount="0" data-maxcount="10")
+                p.iqdropdown-item Взрослые
+              .iqdropdown-menu-option(data-id="item2" data-defaultcount="0" data-mincount="0" data-maxcount="10")
+                p.iqdropdown-item Дети
+              .iqdropdown-menu-option(data-id="item3" data-defaultcount="0" data-mincount="0" data-maxcount="10")
+                p.iqdropdown-item Младенцы
+              button.js-iqdropdown-menu-clean.text.text_title.text_title_bold очистить
+              button.js-iqdropdown-menu-apply.text.text_title.text_title_bold применить
 
         form.form.elems__masked-text-field(name="textField3")
           legend.text.text_title.text_title_bold.form__title masked text field

@@ -122,3 +122,8 @@ $('.js-paginationNumber').parent().on('click', '.js-paginationNumber', function 
   $('.js-paginationNumber').removeClass("pagination__number_active");
   $(this).addClass("pagination__number_active");
 });
+
+// Item-quantity-plugin
+// import '@includes/item-quantity-dropdown/item-quantity-dropdown-libs.js';
+import '@includes/item-quantity-dropdown/item-quantity-dropdown.js';
+import '@includes/item-quantity-dropdown/item-quantity-dropdown-common.css';

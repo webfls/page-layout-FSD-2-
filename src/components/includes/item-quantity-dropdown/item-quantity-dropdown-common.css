@@ -1,4 +1,4 @@
-/* html {
+html {
   box-sizing: border-box
 }
 
@@ -36,9 +36,9 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none
-} */
+}
 
-/* .iqdropdown *:focus {
+.iqdropdown *:focus {
   outline: none
 }
 
@@ -60,7 +60,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0
-} */
+}
 
 .iqdropdown-menu-option {
   cursor: pointer;

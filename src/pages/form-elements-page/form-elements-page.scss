@@ -383,7 +383,7 @@
 .elems {
   display: grid;
   grid-template-columns: [col1] 320px [col2] 126px [col3] 320px [col4] 72px [col5] 320px;
-  grid-template-rows: [row1] 84px[row2] 84px [row3] 87px [row4] 104px [row5] 105px [row6] 105px [row7] 164px [row8] 320px [row9] minmax(64px, 1fr) [row10] 307px [row11] 155px;
+  grid-template-rows: [row1] 84px[row2] 84px [row3] minmax(87px, 500px) [row4] 104px [row5] 105px [row6] 105px [row7] 164px [row8] 320px [row9] minmax(64px, 1fr) [row10] 307px [row11] 155px;
 
   &__text-field1 {
     grid-column: col1;
